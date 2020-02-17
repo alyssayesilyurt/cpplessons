@@ -154,3 +154,61 @@ A constructor is a special function that takes the name of the class and returns
 
 
 :: is called the scope resolution operator. 
+
+A constructor is always invoked during object creation, when an instance of a class is constructed. A constructor is a perfect place for you to initialize class member variables such as integers, pointers, and so on to values you choose. 
+  #include <iostream> 
+  #include <string>
+  using namespace std; 
+
+  class Cat
+  {
+    private: 
+      string name;
+      int age; 
+      string breed; 
+      string color;
+
+    public: 
+      Cat()   //constructor
+      {
+        age = 1;  //initialization
+        cout << "Constructed an instance of class Cat" << endl;
+      }
+
+      void SetName (string catsName)
+      {
+        names = catsName;
+      }
+
+      void SetAge (int catsAge)
+      {
+        age = catsAge;
+      }
+
+      void SetBreed (string catsBreed)
+      {
+        breed = catsBreed;
+      }
+
+      void SetColor (string catsColor)
+      {
+        color = catsColor;
+      }
+
+      void IntroduceSelf()
+      {
+        cout << "I am " + name + " and am ";
+        cout << age << " years old" << endl;
+      }
+  };
+
+  int main()
+  {
+    Cat.myCat;
+    myCat.SetName("Duman");
+    myCat.SetAge (1);
+    myCat.SetBreed("Tabby");
+    myCat.SetColor("Grey");
+
+    myCat.IntroduceSelf();
+  }
